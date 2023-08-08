@@ -4,29 +4,29 @@ PS3=" choose from the following : "
 echo "Successfully connected to Database"
 echo "Welcome to Tables Menu :)"  
 
-select choice in "Create Table" "List Tables" "Drop Table" "Insert into Table" "Select Table" "Delete Table" "Update Table" " Main Menu"
+select choice in "Create Table" "List Tables" "Drop Table" "Insert Into Table" "Select From Table" "Delete From Table" "Update Table" " Main Menu"
     do    
     case $choice in
         "Create Table" ) 
-           bash ./CreateTable 
+           bash ./CreateTable.sh 
         ;;
         "List Tables" ) 
-          bash ./listTables 
+          bash ./listTables.sh 
         ;;
         "Drop Table" )
-          bash ./DropTable 
+          bash ./DropTable.sh 
         ;;
         "Insert Into Table" ) 
-          bash ./InsertTable
+          bash ./InsertTable.sh
         ;;
-        "Select Table" ) 
-          bash ./SelectTable 
+        "Select From Table" ) 
+          bash ./SelectFromTable.sh 
         ;;
-        "Delete Table" )
-          bash ./DeleteTable 
+        "Delete From Table" )
+          bash ./DeleteFromTable.sh 
         ;;
         "Update Table" )
-          bash ./UpdateTable 
+          bash ./UpdateTable.sh 
         ;;  
         " Main Menu" )
         cd .. ; 
