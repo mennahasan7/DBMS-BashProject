@@ -9,3 +9,7 @@ isValidName(){
             return ${false}
         fi
 }
+
+isRepeatedColumn(){ #$1 is the file name, $2 is the column name
+    cut -f1 -d$'\t' $1 | grep -w $2
+}

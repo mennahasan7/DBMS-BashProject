@@ -1,7 +1,7 @@
 #! /bin/bash
 
 PS3="Choose from the menu : "
-echo "Welcome to Database Menu :)"
+echo -e "Welcome to Database Menu \U1F60D"
 cat<<'EOF'
            _..._
          .'     '.
