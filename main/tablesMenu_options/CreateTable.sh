@@ -41,8 +41,8 @@ else
             read -p "Please enter name for column no.$i: " columnname
             if  isValidName $columnname && ! isRepeatedColumn $metadatafile $columnname ;then	
               
-                if [ $i -e 1 ];then 
-                    echo $ncolumns >> $metadatafile # #Columns is in the first line in md
+                if [ $i -eq 1 ];then 
+                    echo $ncolumns$'\n'  >> $metadatafile # #Columns is in the first line in md
                 else
                     echo $'\n' >> $metadatafile #to make a new line starting from the second line
                 fi

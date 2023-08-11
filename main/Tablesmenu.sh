@@ -15,7 +15,7 @@ select choice in "Create Table" "List Tables" "Drop Table" "Insert into Table" "
         "Drop Table" )
           bash ../../main/tablesMenu_options/DropTable.sh 
         ;;
-        "Insert Into Table" ) 
+        "Insert into Table" ) 
           bash ../../main/tablesMenu_options/InsertTable.sh
         ;;
         "Select Table" ) 
