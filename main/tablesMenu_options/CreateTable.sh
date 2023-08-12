@@ -39,15 +39,10 @@ else
         for (( i=1; i<=$ncolumns ; i++ ))
         do
             read -p "Please enter name for column no.$i: " columnname
-            if  isValidName $columnname && ! isRepeatedColumn $metadatafile $columnname ;then	
-              
-                if [ $i -eq 1 ];then 
-                    echo $ncolumns$'\n'  >> $metadatafile # #Columns is in the first line in md
-                else
-                    echo $'\n' >> $metadatafile #to make a new line starting from the second line
-                fi
-             
-                echo -en $columnname"\t" >> $tableName   
+            if  isValidName $columnname && ! isExistColumn $metadatafile $columnname ;then	
+
+                echo $'\n' >> $metadatafile #to make a new line starting from the second line             
+                echo -en $i-$columnname"\t" >> $tableName   #"ex: 1-id 2-name.."
                 echo "Select the $columnname DataType : "
                 select choice in "int" "string"
                 do 

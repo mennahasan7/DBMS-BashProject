@@ -3,7 +3,7 @@
 PS3=" Choose from the following table options : "
 echo -e "Connected to Database Successfully! \U2705  \n Welcome to Tables Menu \U1F60D"
 
-select choice in "Create Table" "List Tables" "Drop Table" "Insert into Table" "Select Table" "Delete Table" "Update Table" " Main Menu"
+select choice in "Create Table" "List Tables" "Drop Table" "Insert Into Table" "Select From Table" "Delete From Table" "Update Table" " Main Menu"
     do    
     case $choice in
         "Create Table" ) 
@@ -15,14 +15,14 @@ select choice in "Create Table" "List Tables" "Drop Table" "Insert into Table" "
         "Drop Table" )
           bash ../../main/tablesMenu_options/DropTable.sh 
         ;;
-        "Insert into Table" ) 
+        "Insert Into Table" ) 
           bash ../../main/tablesMenu_options/InsertTable.sh
         ;;
-        "Select Table" ) 
-          bash ../../main/tablesMenu_options/SelectTable.sh 
+        "Select From Table" ) 
+          bash ../../main/tablesMenu_options/SelectFromTable.sh 
         ;;
-        "Delete Table" )
-          bash ../../main/tablesMenu_options/DeleteTable.sh 
+        "Delete From Table" )
+          bash ../../main/tablesMenu_options/DeleteFromTable.sh 
         ;;
         "Update Table" )
           bash ../../main/tablesMenu_options/UpdateTable.sh 

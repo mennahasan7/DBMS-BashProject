@@ -10,13 +10,14 @@ isValidName(){
         fi
 }
 
-isRepeatedColumn(){ #$1 is the file name, $2 is the column name
-    cut -f1 -d$'\t' $1 | grep -w $2
+isExistColumn(){ #$1 is the file name, $2 is the column name
+    cut -f1 -d $'\t' $1 | grep -w $2 
+    return $?
 }
 
 getColumnsNames ()
 {
-    cut -f1 -d$'\t' $1
+    cut -f1 -d $'\t' $1
 }
 
 isGoodDataType ()
@@ -38,4 +39,10 @@ isGoodDataType ()
                 return 1
             fi
         fi
+}
+
+substitute (){
+    # substituting            
+    sed -i 's/'$OldValue'/'$NewValue'/g' $TableName  #$1 OldValue $2 NewValue $3 TableName
+
 }
