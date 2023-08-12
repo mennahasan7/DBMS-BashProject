@@ -1,4 +1,5 @@
 #! /bin/bash
+source ../../main/emojis.sh
 
 ntables=`ls -F | grep * | wc -l`
 
@@ -13,9 +14,9 @@ metadatafile=md_$tableName
 if [ -f $tableName ]; then 
          rm $tableName
          rm $metadatafile
-         echo -e " Table $tableName has been Deleted Successfully! \U2705"
-         echo -e " Metadata $metadatafile has been Deleted Successfully! \U2705"
-else -e " This Table is Not Exist \U274C"
+         echo -e " Table $tableName has been Deleted Successfully! $success"
+         echo -e " Metadata $metadatafile has been Deleted Successfully! $success"
+else -e " This Table is Not Exist $failure"
 fi
 
 . ../../main/Tablesmenu.sh

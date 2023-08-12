@@ -20,8 +20,8 @@ source ../../main/Functions.sh
 				done
 			echo $'\n' >> $tableName
 			done
-			echo "insert done into $tableName"
+			echo -e "insert done into $tableName $success"
 			else
-				echo "Table doesn't exist please enter the tables name again"
+				echo -e "Table doesn't exist please enter the tables name again $failure"
 				. ../../main/tablesMenu_options/InsertTable.sh
 	fi

@@ -1,5 +1,6 @@
 #! /bin/bash
 source ../../main/Functions.sh
+source ../../main/emojis.sh
 
 PS3="Please enter your choice:"
 read -p "Please Enter Table Name which you want to select data from " tableName
@@ -26,7 +27,7 @@ if [[ -f $tableName ]]; then
       . ../../main/Tablesmenu.sh    
       ;;
      *) 
-        echo "Invalid choice try again"
+        echo -e "Invalid choice try again $failure"
         . ../../main/tablesMenu_options/SelectFromTable.sh
      ;;
    esac
@@ -37,5 +38,5 @@ if [[ -f $tableName ]]; then
    4) Back to Table menu"   
    done 
    else
-      echo "Table not exist ! "
+      echo -e "Table not exist ! $failure"
    fi

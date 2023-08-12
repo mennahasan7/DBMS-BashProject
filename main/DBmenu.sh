@@ -1,7 +1,8 @@
 #! /bin/bash
+source emojis.sh
 
 PS3="Choose from the menu : "
-echo -e "Welcome to Database Menu \U1F60D"
+echo -e "Welcome to Database Menu $eyesHeart"
 cat<<'EOF'
            _..._
          .'     '.

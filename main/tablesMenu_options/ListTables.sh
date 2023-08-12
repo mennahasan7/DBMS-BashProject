@@ -1,9 +1,10 @@
 #! /bin/bash
+source ../../main/emojis.sh
 
 ntables=`ls -F | grep * | wc -l`
 
 if [ $ntables -eq 0 ];then 
-    echo "No tables found"
+    echo -e "No tables found $failure"
 else 
     select choice in "List all tables" "List a specfic table" "Back to menu"
         do
@@ -22,7 +23,7 @@ else
                 cat $tableName
 
             else 
-                echo "Table with name $tableName Not exists"
+                echo -e "Table with name $tableName Not exists $failure"
                 bash ../../main/tablesMenu_options/ListTables.sh
             fi
             bash ../../main/Tablesmenu.sh
@@ -32,7 +33,7 @@ else
             ;;
 
             * )
-            echo -e "Invalid choice \U274C" ;;
+            echo -e "Invalid choice $failure" ;;
             esac
         done
 fi
