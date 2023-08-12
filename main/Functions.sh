@@ -42,7 +42,6 @@ isGoodDataType ()
 }
 
 substitute (){
-    # substituting            
-    sed -i 's/'$OldValue'/'$NewValue'/g' $TableName  #$1 OldValue $2 NewValue $3 TableName
-
+    sed -i 's/'$1'/'$2'/g' $3  #$1 OldValue $2 NewValue $3 TableName
+    echo " Value Updated Successfully "
 }
